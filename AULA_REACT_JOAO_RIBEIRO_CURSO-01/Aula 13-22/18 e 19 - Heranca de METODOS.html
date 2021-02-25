@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HERANCA DE METODOS</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+
+        class CompPai extends React.Component{
+
+            metodo1(){
+                console.log("Metodo 1")
+            }
+
+            metodo2 = (texto) =>{
+                console.log(`Metodo 2 ${texto}`)
+            }
+
+            metodo3 = (texto) => {
+                console.log(`Metodo 3 ${texto}`)
+            }
+
+            render() {
+                return (
+                    <div>
+                        <p>Texto do Pai</p>
+                        <CompFilho met1={this.metodo1} met2={() => this.metodo2("xoxota")} met3={this.metodo3}/>
+                    </div>
+                )
+            }
+        }
+
+        class CompFilho extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <button onClick={this.props.met1}>Clique1</button>
+                        <button onClick={this.props.met2}>Clique2</button>
+                        <button onClick={()=>this.props.met3("Piroca")}>Clique3</button>
+                    </div>
+                )
+            }
+        }
+    
+        ReactDOM.render(
+            <CompPai />,
+            document.querySelector("#root")
+        )
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RENDERIZACAO CONDICIONADO (4 FORMAS DIFERENTES)</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+
+        class App extends React.Component{
+
+            constructor () {
+                super()
+
+                this.state = {
+                    tempoBom: true
+                }
+
+            }
+
+            render() {
+
+                //MODO SHORT-CIRCUIT *APENAS USADO PARA CONDICAO VERDADEIRA!* ------
+                return this.state.tempoBom && <p>O tempo esta bom!</p>
+                // -----------------------------------------------------------
+
+
+
+                /*MODO POR CONDICAO TERNARIA---------------------
+                return(
+                    this.state.tempoBom ?
+                    <p>O tempo esta bom!</p> :
+                    <p>O tempo esta mal =(</p>
+                )
+                *///---------------------------------------------
+
+
+                
+                /* MODO POR VARIAVEL ------------------------------
+                let tempo
+                if(this.state.tempoBom){ 
+                    tempo = <p>O tempo esta bom!</p>
+                } else {
+                    tempo = <p>O tempo esta mal =(</p>
+                }
+
+                return tempo
+                *///-----------------------------------------
+
+
+
+                /* MODO POR IF ELSE--------------------------
+                if (this.state.tempoBom){
+                    return(
+                        <p>O tempo esta bom!</p>
+                    )
+                } else {
+                    return(
+                        <p>O tempo esta mal =(</p>
+                    )
+                }
+                *///-------------------------------------------
+            }
+        }
+
+        ReactDOM.render(
+            <App />,
+            document.querySelector("#root")
+        )
+    </script>
+</body>
+</html>

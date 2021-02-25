@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEXTAREA NO REACT</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+        class App extends React.Component{
+            constructor() {
+                super()
+
+                this.state = {
+                    texto: ""
+                }
+            }
+
+            alterarTexto = (event) => {
+                this.setState({
+                    texto: event.target.value
+                })
+            }
+
+            render() {
+                return (
+                    //TRATAR O TEXTAREA COMO UM INPUT: 
+                    // <textarea value={} onChange= {} etc... />
+                    <div>
+                        <textarea value={this.state.texto} onChange={this.alterarTexto} cols="30" rows="5" />
+                        <hr />
+                        <h3>Texto: </h3>
+                        <p>{this.state.texto} </p>
+                    </div>
+                )
+            }
+        }
+
+        ReactDOM.render(
+            <App />,
+            document.querySelector("#root")
+        )
+    </script>
+</body>
+</html>

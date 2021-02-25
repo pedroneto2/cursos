@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INLINE STYLE NO REACTDOM</title>
+</head>
+<body>
+    
+    <div id="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+   
+    <!-- INLINE STYLE NO REACTDOM -->
+    
+    <script type="text/babel">
+
+    
+        class CompA extends React.Component {
+            render() {
+
+                let estilo = { // sempre colocar as chaves
+                    backgroundColor: "yellow", //repare que usei "backgroundColor" ao inves de "background-color"
+                    color: "red",
+                    padding: "20px",
+                }
+
+                return (
+                    <div>
+                    <p style ={estilo /*aqui dentro vai JS puro, no aso eu chamei uma variavel, mas poderia colcoar aqui dentro direto*/}>Teste de style inline</p>
+                    </div>
+                )
+            }
+        }
+
+        ReactDOM.render(
+                <CompA />,
+                document.querySelector('#root')
+            )
+    </script>
+</body>
+</html>

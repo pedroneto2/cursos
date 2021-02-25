@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXEMPLO DE RENDERIZACAO DE LISTA E NOTICIAS</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+
+        class App extends React.Component{
+            render(){
+
+                let noticias = [
+                    {
+                        titulo: "Noticia 1",
+                        texto: "Texto da noticia 1",
+                        autor: "Autor 1"
+                    },
+                    {
+                        titulo: "Noticia 2",
+                        texto: "Texto da noticia 2",
+                        autor: "Autor 2"
+                    },
+                    {
+                        titulo: "Noticia 3",
+                        texto: "Texto da noticia 3",
+                        autor: "Autor 3"
+                    }
+                ]
+
+                let final = noticias.map( n => <Noticia news={n} /> ) 
+
+                return(
+                    <div>
+                        <h2>NOTICIAS</h2>
+                        <hr />
+                        {final}
+                    </div>
+                )
+            }
+        }
+
+        class Noticia extends React.Component{
+            render(){
+                return(
+                    <div>
+                        <h3>{this.props.news.titulo}</h3>
+                        <p>{this.props.news.texto}</p>
+                        <small><i>{this.props.news.autor}</i></small>
+                    </div>
+                )
+            }
+        }
+
+        ReactDOM.render(
+            <App />,
+            document.querySelector("#root")
+        )
+    </script>
+</body>
+</html>

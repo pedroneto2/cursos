@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+
+        class App extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <h2>Exercicio</h2>
+                        <hr/>
+                        <CompNome nome_i="Jose" nome_f="Joaquim"/>
+                        <CompNome nome_i="Ana" nome_f="Catarina"/>
+                        <CompNome nome_i="Carlos" nome_f="Antonio"/>
+                        
+                    </div>
+                )
+            }
+        }
+
+        class CompNome extends React.Component {
+
+            constructor (props) {
+                super(props)
+                this.state = {
+                    nome: this.props.nome_i,
+                }
+                //NAO EH MAIS NECESSARIO FAZER O BIND AQUI!
+                //AO INVES DISSO, FAZ-SE O BIND NO "onClick"
+            }
+
+            troca_nome() {
+                    this.setState({
+                    nome: this.props.nome_f,
+                    })
+                }
+
+            render(){
+                return (
+                    <div>
+                        <p>Nome: {this.state.nome}</p>
+                        <button onClick={this.troca_nome.bind(this)}>Alterar</button>
+                    </div>
+                )
+                //ALI EM CIMA NO "BUTTON" FAZ-SE O BIND DIRETAMENTE AO ASSOCIAR A FUNCAO NO "ONCLICK"
+            }
+        }
+
+        ReactDOM.render(<App />,
+        document.querySelector("#root"))
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,355 @@
+<style>
+    *{
+  margin:0;
+  padding:0;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+#welcome-section{
+  margin: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  background:rgb(50,50,50);
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+ }
+
+#welcome-section > h1 {
+  color: white;
+}
+
+#welcome-section > h3 {
+  color: rgb(75,0,0);
+}
+
+
+#projects{
+  margin: auto;
+  position: relative;
+  background:rgb(75,75,150);
+  width: 100%;
+  text-align: center;
+  padding-bottom: 75px;
+}
+
+#projects > h2 {
+  text-decoration:underline overline;
+  font-size: 2.5em;
+  padding: 50px;
+}
+
+.projects-container{
+  position:relative;
+  background: pink;
+  max-width: 1500px;
+  width: 90%;
+  margin: auto;
+  }
+
+@media (min-width: 820px){
+  
+  #welcome-section > h1 {
+    padding-top: 20%;
+    font-size: 3em;
+    padding-bottom: 10px;
+  }
+  
+  .projects-container{
+    max-height: 1450px;
+    min-width: 1000px;    
+  }
+  
+   .project-tile{
+    height: 450px;
+    width: 400px;
+  }
+  
+  footer > h4{
+    top: 50%;
+  }
+}
+
+@media (max-width: 819px){
+  
+  #welcome-section > h3 {
+  font-size: 0.55em;
+}
+  
+  #welcome-section > h1 {
+    padding-top: 25%;
+    font-size: 1.5em;
+  }
+  
+  .projects-container{
+    min-width: 0px;
+    }
+  
+  .project-tile{
+    width: 80%;
+    height: auto;
+  }
+  
+  footer > h4{
+    top: 75%;
+  }
+  
+}
+
+.project-tile{
+  display:inline-block;
+  background: rgb(50,50,50);
+  margin: 15px;
+}
+
+
+#section-profile{
+  margin: 0;
+  position: relative;
+  background:rgb(50,50,50);
+  height: 100vh;
+  width: 100%;
+}
+
+img{
+  position:relative;
+  height: 85%;
+  width: 100%;
+ }
+
+.project-tile > a {
+  position:relative;
+  bottom:-4%;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+code{
+  color: rgb(50,50,50);
+  font-weight: bold;
+  transition: 500ms ease-out;
+}
+
+.project-tile > a:hover code{
+  color: rgb(75,0,0);
+}
+
+
+.showall {
+  display:relative;
+  margin: 75px auto auto;
+  height: 50px;
+  width: 150px;
+  background: rgb(50,50,50);
+}
+
+.showall > a {
+  position:relative;
+  top: 30%;
+  text-transform:uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+.showall:hover{
+  background:rgb(75,0,0);
+  transition: 500ms ease-out;
+}
+
+#section-profile > h2 {
+  position:relative;
+  font-size: 3em;
+  width: 462px;
+  height: 50px;
+  top: 38%;
+  left: 50%;
+  transform:translateX(-50%);
+}
+
+#section-profile > p {
+  position:relative;
+  width: 197px;
+  left:50%;
+  transform:translateX(-50%);
+  top:44%;
+}
+
+.socialmedia{
+  position:relative;
+  width: 600px;
+  top: 50%;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.socialmedia > a {
+  padding-left: 31px;
+}
+
+.socialmedia > a:hover > i {
+  transform:translate(50%,50%);
+  transition: 500ms ease-out;
+  opacity: 0%;
+}
+
+.sm-text{
+  display:inline-block;
+}
+
+.socialmedia > a:hover > .sm-text {
+  transform:translate(-50%, -50%);
+  transition: 500ms ease-out;
+  opacity: 0%;
+}
+
+footer{
+  position: absolute;
+  background:rgb(50,50,50);
+  bottom:0px;
+  height: 100px;
+  width: 100%;
+  border-top: 5px solid rgb(75,0,0);
+}
+
+footer > p {
+  position:absolute;
+  transform:translateY(-50%);
+  top: 50%;
+  left: 5%;
+}
+
+footer > h4 {
+  position:absolute;
+  transform:translateY(-50%);
+  right: 5%;
+}
+
+navbar{
+  position:fixed;
+  z-index:1;
+  height: 100px;
+  top:0;
+  width:100%;
+  background: rgb(75,0,0);
+}
+
+.links-container{
+  position:absolute;
+  right: 0;
+}
+
+
+.links-container > a {
+  display:inline-block;
+  text-align:center;
+  padding-top: 30px;
+  text-transform:uppercase;
+  text-decoration:none;
+  height:70px;
+  width: 100px;
+}
+
+.links-container> a:hover{
+  background:rgb(50,50,50);
+}
+
+
+
+
+</style>
+
+<!--
+ =========================================   
+
+    HTML CODE BELOW AND CSS CODE ABOVE
+
+==========================================
+-->
+
+<!-- FREECODE CAMP CHECKER CODE BELOW-->
+
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!--ICONS IMPORT BELOW-->
+<link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+  integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+  crossorigin="anonymous"
+/>
+<link
+  href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap"
+  rel="stylesheet"
+/>
+<link
+  href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap"
+  rel="stylesheet"
+/>
+<!--ICONS IMPORT ABOVE ANDE HTML CODE BELOW-->
+
+<head>
+<title>Personal Portfolio WebPage</title>
+</head>
+<navbar id="navbar">
+  <div class="links-container">
+   <a href="#welcome-section">About<div></div></a>
+   <a href="#projects">Work<div></div></a>
+   <a href="#profile-link">Contact<div></div></a>
+  </div>
+</navbar>
+<main>
+  <section id="welcome-section">
+    <h1>Hey I am Oscar Neymar</h1>
+    <h3>a great architect and a great football player</h3>
+  </section>
+  <section id="projects">
+    <h2>These are some of my projectS</h2>
+    <div class="projects-container">
+      <div class="project-tile tile01">
+        <img src="https://cdn.pixabay.com/photo/2017/02/08/11/43/brasilia-2048565_1280.jpg" alt="Brasilia`s Building">
+        <a href="https://cdn.pixabay.com/photo/2017/02/08/11/43/brasilia-2048565_1280.jpg"><code>< </code>Construí com meus pés<code> /></code></a>
+      </div>
+      <div class="project-tile tile02">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Neymar_Presentation.jpg/400px-Neymar_Presentation.jpg">
+        <a href="https://commons.wikimedia.org/wiki/File:Neymar_Presentation.jpg"><code>< </code>Embaixadinha Calculada<code> /></code></a>
+      </div>
+      <div class="project-tile tile 03">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Parque_Ibirapuera%2C_Oscar_Niemeyer_%285877302081%29.jpg">
+        <a href="https://commons.wikimedia.org/wiki/File:Parque_Ibirapuera,_Oscar_Niemeyer_(5877302081).jpg"><code>< </code>Enterrei uma bola gigante<code> /></code></a>
+      </div>
+      <div class="project-tile tile 04">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Neymar_Olympics_August_2016.jpg">
+        <a href="https://commons.wikimedia.org/wiki/File:Neymar_Olympics_August_2016.jpg"><code>< </code>Ideiei Brasília no meio da partida<code> /></code></a>
+      </div>
+      <div class="project-tile tile 05">
+        <img src="https://cdn.pixabay.com/photo/2015/12/11/05/39/oscar-niemeyer-1087668_1280.jpg">
+        <a href="https://pixabay.com/pt/photos/oscar-niemeyer-rio-de-janeiro-1087668/"><code>< </code>Inspirado na taça da copa<code> /></code></a>
+      </div>
+      <div class="project-tile tile 06">
+        <img src="https://biografieonline.it/img/bio/Neymar_1.jpg">
+        <a href="https://aforismi.meglio.it/aforisma.htm?id=11215"><code>< </code>Inspirado no MAC<code> /></code></a>
+      </div>
+    </div>
+    <div class="showall">
+      <a href="https://codepen.io/FreeCodeCamp/">Show All</a>
+    </div>
+  </section>
+  <section id="section-profile">
+    <h2>Let`s work together!</h2>
+    <p>How do you like your coffe?</p>
+    <div class="socialmedia">
+      <a target="_blank" href="https://facebook.com/freecodecamp"><i class="fab fa-facebook-square"></i><div class="sm-text">Facebook</div></a>
+      <a target="_blank" id="profile-link" href="https://github.com/freecodecamp"><i class="fab fa-github"></i><div class="sm-text">GitHub</div></a>
+      <a target="_blank" href="https://twitter.com/freecodecamp"><i class="fab fa-twitter"></i><div class="sm-text">Twitter</div></a>
+      <a target="_blank" href="mailto:example@example.com"><i class="fas fa-at"></i><div class="sm-text">Send a mail</div></a>
+      <a target="_blank" href="tel:555-5555-5555"><i class="fas fa-mobile-alt"></i><div class="sm-text">Call me</div></a>
+      </div>
+      <footer>
+        <p>**This is just a fake portfolio. All the projects and contact details given are not real.</p>
+        <h4>© Created for <a target="_blank" href="https://www.freecodecamp.com/">freeCodeCamp <i class="fab fa-free-code-camp"></i></a></h4>
+      </footer>
+  </section>
+</main>

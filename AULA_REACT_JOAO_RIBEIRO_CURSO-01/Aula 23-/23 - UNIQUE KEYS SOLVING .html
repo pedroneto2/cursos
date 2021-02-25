@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESOLVENDO ERRO DO UNIQUE KEY DO REACT</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+
+        class App extends React.Component{
+            render(){
+
+                let socios =[
+                    {
+                        id: 1,       //COLOCAR UM ID PARA CADA ITEM DO OBJETO
+                        nome:"Joao",
+                        idade: 45
+                    },
+                    {
+                        id: 2,
+                        nome:"Ana",
+                        idade: 54
+                    }
+                ]
+
+                let final = socios.map( socio => <CompA key={socio.id} socio={socio} /> )
+                //ATRIBUIR UMA KEY RELACIADO A UMA PROPRIEDADE ID
+                // NA FUNCAO MAP ACIMA PARA RESOVLER O ERRO DO REACT
+
+                return(
+                    <div>
+                        <h2>SOCIOS</h2>
+                        <hr />
+                        {final}
+                    </div>
+                )
+            }
+        }
+
+        class CompA extends React.Component{
+            render(){
+                return( // NAO EH POSSIVEL ACESSAR A KEY COM THIS.PROPS.SOCIO.KEY
+                        //  NEM COM THIS.PROPS.KEY NEM COM NADA DIRETAMENTE
+                        // APENAS ACESSANDO A PROPRIEDADE RELACINADA COM A KEY
+                        // NESSE CASO O ID: THIS.PROPS.SOCIO.ID
+                    <div>
+                        <p>key: {this.props.socio.id}</p> 
+                        <p>nome: {this.props.socio.nome}</p>
+                        <p>idade: {this.props.socio.idade}</p>
+                        <hr />
+                    </div>
+                )
+            }
+        }
+
+        ReactDOM.render(
+            <App />,
+            document.querySelector("#root")
+        )
+    </script>
+</body>
+</html>

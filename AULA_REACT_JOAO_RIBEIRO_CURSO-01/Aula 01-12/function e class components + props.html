@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNCTION E CLASS COMPONENTS + PROPS</title>
+</head>
+<body>
+    
+    <div id="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+   
+    <!-- exemplo function componentes com props -->
+    
+    <script type="text/babel">
+
+        function CompA(props) {
+            return (
+                <div>
+                    <p>Ola, {props.nome} {props.apelido}.</p>
+                </div>
+            )
+        }
+    
+        class CompB extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <p>Ola, novamente {this.props.nome} {this.props.apelido}</p>
+                    </div>
+                )
+            }
+        }
+
+        const root = document.querySelector("#root")
+        ReactDOM.render(<CompB nome="joao" apelido="ribeiro" />,root)
+    </script>
+    
+</body>
+</html>

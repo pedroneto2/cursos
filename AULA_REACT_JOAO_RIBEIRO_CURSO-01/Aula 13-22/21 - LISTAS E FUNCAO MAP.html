@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RENDERIZACAO DE LISTAS E FUNCAO MAP</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+
+        class App extends React.Component {
+            render() {
+
+                let pessoas = [
+                    {
+                        nome: "Joaquim",
+                        profissao: "Programador"
+                    },
+                    {
+                        nome:"Ana",
+                        profissao: "Professora"
+                    },
+                    {
+                        nome: "Jose",
+                        profissao: "Comedor profissional de anus"
+                    }
+                ]
+
+                let final = pessoas.map(obj => <h3>O {obj.nome} exerce a profissao de {obj.profissao}</h3>)
+
+                return (
+                    <div>
+                        {final}
+                    </div>
+                )
+            }
+        }
+
+        ReactDOM.render(
+            <App />,
+            document.querySelector("#root")
+        )
+
+        // EXEMPLO FUNCAOM MAP:
+
+        let p = ["Paula", "Pedro", "Antonio"]
+        let novo = p.map(v => `Bom dia ${v}`)
+        console.log(novo) //sera impresso no console
+
+    </script>
+</body>
+</html>
