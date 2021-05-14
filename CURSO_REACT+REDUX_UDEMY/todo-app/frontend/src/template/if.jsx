@@ -1,3 +1,1 @@
-import React from "react";
-
-export default (props) => (props.test ? props.children : false);
+export default (props) => (props.test ? null : props.children);
