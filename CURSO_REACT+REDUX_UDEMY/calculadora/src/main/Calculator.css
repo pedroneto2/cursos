@@ -1,0 +1,59 @@
+*{
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.calculator {
+    height: 324px;
+    width: 236px;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0); /*Temporario*/
+}
+
+#display{
+    color: white;
+    font-weight: bold;
+    text-align: end;
+    width: 100%;
+    height: 54px;
+}
+
+#display p {
+    transform:translateY(15px);
+}
+
+#secoes{
+    display: flex;
+}
+
+#operacoes{
+    color: white;
+    width: 59px;
+    height: 270px;
+    background:rgb(255, 81, 0)
+}
+
+#painel{
+    color: white;
+    font-weight: bold;
+    width: 177px;
+    height: 270px;
+    background:rgb(86, 87, 87)
+}
+
+#painel div {
+    height: 52px;
+}
+
+#painel div p {
+    width: 57px;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+#operacoes p {
+    height: 47px;
+    width: 59px;
+    transform: translateY(50%);
+    border: 1px solid black;
+}

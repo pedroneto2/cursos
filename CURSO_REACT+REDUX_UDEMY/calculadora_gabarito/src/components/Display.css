@@ -1,0 +1,15 @@
+.display{
+    background-color: rgb(19, 3, 49);
+    width: 100%;
+    height: 100%;
+    grid-column: span 4;
+    font-weight: bold ;
+    display:flexbox;
+    text-align: end;
+    position: relative;
+    overflow-x: auto;
+    font-size: larger;
+    box-sizing: border-box;
+    padding-right: 20px;
+    padding-top: 25px;
+}
