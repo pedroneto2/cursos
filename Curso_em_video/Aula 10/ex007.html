@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Numeros</title>
+    <style>
+        h3, #result{
+            position: relative;
+            display: inline;
+        }
+        #result{
+            margin-left: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name ="textn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="somar" id="buttonsum"></br>
+    <h3>Resultado:</h3>
+    <div id="result"></div>
+    <script>
+        var tn1 = window.document.querySelector('#txtn1')
+        var tn2 = window.document.querySelector('#txtn2')
+        window.document.querySelector('#buttonsum').addEventListener('click', somar)
+        window.addEventListener('keydown',(event) => {if(event.keyCode === 13){somar();}})
+        function somar() {
+            let resultado = Number(tn1.value) + Number(tn2.value)
+            window.document.querySelector('#result').innerHTML = `<strong>${resultado}</strong>`
+        }
+    </script>
+</body>
+</html>

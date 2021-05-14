@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAIS DE ORIGEM</title>
+    <style>
+        div{
+            font: bold 15pt Arial;
+            margin: 15pt;
+            color: rgb(0,100,100);
+        }
+    </style>
+</head>
+<body>
+    <h1>QUAL O SEU PAIS DE ORIGEM?</h1>
+    <input type="text" placeholder="Insira seu pais de origem" name="txt01" id="txt01">
+    <input type="button" value="Enviar" id="enviar">
+    <div id="pais"></div>
+    <script>
+        window.addEventListener('keydown', (event) => { if (event.keyCode === 13) {calcular()}})
+        window.document.querySelector("#enviar").addEventListener('click',calcular)
+        function calcular(){
+            if (window.document.querySelector("#txt01").value === ''){
+                return alert('Digite o seu pais de origem no local indicado!')
+            }
+            window.document.querySelector("#pais").innerHTML = "Voce eh "
+            if(window.document.querySelector("#txt01").value.toLowerCase() == 'brasil' ||
+            window.document.querySelector("#txt01").value == 'brasil'){
+                window.document.querySelector("#pais").innerHTML += "brasileiro"
+            } else {window.document.querySelector("#pais").innerHTML += "estrangeiro"}
+        }
+    </script>
+</body>
+</html>

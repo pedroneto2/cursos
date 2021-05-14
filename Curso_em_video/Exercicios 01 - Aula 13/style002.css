@@ -1,0 +1,52 @@
+body{
+    background: rgb(0,100,250);
+}
+header{
+    text-align: center;
+    font: bold 20pt Arial;
+    color: white;
+}
+section{
+    background: white;
+    border-radius: 20pt;
+    width: 500px;
+    height: fit-content;
+    margin: auto;
+    padding: 10pt 0 20pt 20pt;
+    font: normal 15pt Arial;
+    box-shadow: 10pt 10pt 10pt rgba(0, 0, 0, 0.74);
+}
+section *{
+    margin-top: 10pt;
+}
+#inputano{
+    width: 240px;
+    height: 20px;
+    padding-left: 15px;    
+}
+#inputano::placeholder{
+    font: bold 10pt Arial;
+}
+#verificar{
+    position: relative;
+    display: flex;
+    font: bold 15pt Arial;
+    padding: 5px;
+    margin: 15pt auto;
+}
+footer{
+    text-align: center;
+    font: italic 15pt Arial;
+    color: white;
+}
+#resultado{
+    text-align: center;
+}
+img{
+    display: flex;
+    margin: auto;
+    border-radius: 100pt;
+    padding: 20pt;
+    height: 300pt;
+    width: 300pt;
+}

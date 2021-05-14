@@ -1,0 +1,56 @@
+body{
+    min-height: 100vw;
+    background: linear-gradient(to bottom,rgba(15, 1, 77, 0.753),rgba(36, 114, 138, 0.5));
+}
+header{
+    text-align: center;
+    font: bold 40pt Arial;
+    color: rgb(255, 255, 255);
+    padding: 50px;
+}
+footer{
+    padding: 20px;
+    text-align: center;
+    font: italic 20pt Arial;
+    color: white;
+}
+section{
+    width: 500px;
+    margin: auto;
+    border-radius: 25pt;
+    font: normal 30pt Arial;
+    color: rgba(255, 255, 255, 0.753);
+    background: linear-gradient(rgba(71, 9, 100, 0.5),rgba(128, 25, 197, 0.247));
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.767);
+}
+input{
+    display: inline-block;
+    padding-left: 10px;
+    height: 30px;
+    margin: 20px auto 0 auto;
+    font: italic 15pt Arial;
+    transform: translate(0,-5px);
+}
+#contar{
+    height: fit-content;
+    padding: 20px;
+    font: bold 25pt Arial;
+    background: rgb(46, 3, 82);
+    color: white;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 25px;
+    box-shadow: 5px 5px 5px black;
+}
+#contagem {
+    margin-left: 25px;
+    padding-bottom: 25px;
+}
+.numbers:hover{
+    background: rgb(46, 3, 82);
+    color: white;
+}
+
+#holder{
+    padding: 25px 0 0 25px;
+}

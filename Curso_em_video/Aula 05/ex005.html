@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background: rgb(57, 180, 189);
+            color: rgb(28, 9, 97);
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Primeiros passos com DOM</h1>
+    <p>Aqui vai um paragrafo</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em js</p>
+    <div id="xeca">click em mim</div>
+    <div class="xoca">XATUBA DE MESQUITA</div>
+    <script>
+        var p1 = window.document.querySelector("div#xeca")
+        var p2 = window.document.querySelector("div.xoca")
+        window.document.write(`Resultado = ${p1.innerText}`)
+        p1.style.color = 'red'
+        p2.style.color = 'rgb(150,150,0)'
+    </script>    
+</body>
+</html>

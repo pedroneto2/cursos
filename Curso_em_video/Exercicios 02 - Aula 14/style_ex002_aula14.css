@@ -1,0 +1,56 @@
+body {
+    height: 100vw;
+    background:linear-gradient(to bottom, rgb(160, 211, 253), rgb(167, 242, 255));
+}
+header {
+    margin: 20px;
+    text-align: center;
+    font: bold 20pt Arial;
+}
+section{
+    font: bold 15px Arial;
+    padding: 10px;
+    margin: auto;
+    width: 400px;
+    box-shadow: 5px 5px 5px rgb(11, 11, 37);
+    border-radius: 10px;
+    background: linear-gradient(to bottom, rgba(118, 164, 180, 0.507), rgba(167, 230, 255, 0.5));
+}
+#enviar{
+    background: rgb(26, 0, 97);
+    color: rgb(0, 255, 255);
+    font: bold;
+}
+#enviar:hover{
+    background: rgb(0, 255, 255);
+    color: rgb(26, 0, 97);
+    font: bold;
+}
+footer{
+    margin: 20px;
+    text-align: center;
+    font: italic;
+}
+ul{
+    display: inline-block;
+    position:relative;
+    height: 100px;
+    list-style-type: none;
+    width: 200px;
+    background: white;
+    overflow-y: scroll;
+}
+ul li {
+    width: 200px;
+    margin: 5px auto 5px -30px;
+}
+#res{
+    display: inline-block;
+    position:relative;
+    transform: translate(50px, -60px);
+    font: bold 30px Arial;
+}
+#tabuada li:hover {
+    background:rgb(0, 255, 255);
+    cursor: pointer;
+}

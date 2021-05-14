@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HORA DO DIA</title>
+    <style>
+        h1 {
+            padding: 15pt;
+            text-align: center;
+            margin: auto;
+            font: bold 25pt Arial;
+            color: rgb(202, 233, 144);
+        }
+        p { 
+            padding: 15pt;
+            font: italic 10pt Arial;
+            text-align: center;
+            margin: auto;
+            color: white;
+        }
+        section {
+            font: normal 20pt Arial;
+            border-radius: 20pt;
+            background: white;
+            width: fit-content;
+            margin: auto;
+            box-shadow: 5pt 5pt 10pt black;
+        }
+        div {
+            text-align: center;
+            margin: auto;
+            padding: 10pt;
+        }        
+        img{
+            height: 300pt;
+            width: 450pt;
+            border-radius: 20pt;
+        }
+    </style>
+</head>
+<body id="corpo">
+    <header>
+        <h1>HORA DO DIA</h1>
+    </header>
+    <section>
+        <div id="cumprimento"></div>
+        <div id="foto"><img id="img" src="" alt="Foto da hora do dia"></div>
+    </section>
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+    <script>
+        let hora = new Date().getHours()
+        if (hora < 12 && hora >= 6) {
+            document.querySelector("#cumprimento").innerHTML = `<strong>BOM DIA!</strong></br>Agora sao ${hora} horas`
+            document.querySelector("#corpo").style.background = 'rgb(100,200,250)'
+            document.querySelector("#img").src = "https://i.pinimg.com/originals/0c/ee/95/0cee9516d046626b24166774ca4d9009.jpg"            
+        }
+        else if (hora >= 12 && hora <18) {
+            document.querySelector("#cumprimento").innerHTML = `<strong>BOA TARDE!</strong></br>Agora sao ${hora} horas`
+            document.querySelector("#corpo").style.background = 'rgb(150,100,50)'
+            document.querySelector("#img").src = "http://eskipaper.com/images/amazing-sunny-day-wallpaper-1.jpg"
+        } else {
+            document.querySelector("#cumprimento").innerHTML = `<strong>BOA NOITE!</strong></br>Agora sao ${hora} horas`
+            document.querySelector("#corpo").style.background = 'rgb(50,50,50)'
+            document.querySelector("#img").src = "https://www.maxmilhas.com.br/blog/wp-content/uploads/2017/09/Macei%C3%B3-Alagoas-770x450.jpg"
+            
+        }
+    </script>
+</body>
+</html>
